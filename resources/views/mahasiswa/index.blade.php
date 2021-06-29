@@ -7,8 +7,7 @@
             <div class="card">
                 <div class="card-header">Data Mahasiswa
                     <div class="pull-class">
-                        <a href="{{ route('mahasiswa.create') }}" class="btn btn-sm btn-primary float-right">Tambah Data</a>
-                        <a href="#" class="btn btn-sm btn-success float-right">Cari</a>
+                        <a href="{{ route('mahasiswa.create') }}" class="btn btn-md btn-primary float-right">Tambah Data</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -27,15 +26,15 @@
                             @foreach ($mahasiswa as $mhs)
                             <tr>
                                 <td>{{ $mhs->id }}</td>
-                                <td></td>
+                                <td>{{ $mhs->name }}</td>
                                 <td>{{ $mhs->tempat_lahir.', '. $mhs->tgl_lahir }}</td>
                                 <td>{{ $mhs->telepon }}</td>
-                                <td>{{ $mhs->alamat }}</td>
+                                <td><{{ $mhs->alamat }}/td>
                                 <td>{{ $mhs->gender }}</td>
-                                <td></td>
+                                <td>{{ $mhs->photo }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-warning">EDIT</a>
-                                    <a href="#" class="btn btn-sm btn-danger">HAPUS</a>
+                                    <a href="{{ route('edit.mahasiswa', $mhs->id) }}" class="btn btn-sm btn-warning">EDIT</a>
+                                    <a href="{{ route('hapus.mahasiswa', $mhs->id) }}" class="btn btn-sm btn-danger">HAPUS</a>
                                 </td>
                             </tr>
                             @endforeach

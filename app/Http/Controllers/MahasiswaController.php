@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mahasiswa;
+use Alert;
 use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
@@ -21,8 +22,27 @@ class MahasiswaController extends Controller
     public function store(Request $request)
     {
         Mahasiswa::create($request->all()); 
-        return redirect()->route('mahasiswa.index');
+        return redirect()->route('mahasiswa');
 
     }
+
+    public function edit($id){
+        $mahasiswa = Mahasiswa::find($id);
+        return view('mahasiswa.edit', compact('mahasiswa'));
+     }
+ 
+     public function update(Request $request, $id){
+         $mahasiswa = Mahasiswa::find($id);
+         $mahasiswa->update($request->all());
+         toast('Yeahh Berhasil Mengedit Data','Success');
+         return redirect()->route('mahasiswa');
+     }
+ 
+     public function destroy($id){
+         $mahasiswa = Mahasiswa::find($id);
+         $mahasiswa->delete();
+         toast('Yeahh Berhasil Menghapus Data','Success');
+         return redirect()->route('mahasiswa');
+     }
 
 }

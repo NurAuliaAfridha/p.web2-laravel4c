@@ -7,40 +7,45 @@
             <div class="card">
                 <div class="card-header">Tambah Data Mahasiswa</div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('simpan.mahasiswa') }}">
+                    <form method="POST" action="{{ route('update.mahasiswa', $mahasiswa->id) }}">
                         @csrf
                         <div class="form-group row">
                                 <label for="" class="col-md-4 text-md-right">Nama Lengkap</label>
                             <div class="col-md-6">
-                                <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama">
+                                <input type="text" name="nama" class="form-control" 
+                                placeholder="Masukkan Nama">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Tempat Lahir</label>
                             <div class="col-md-6">
-                                <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan Tempat Lahir">
+                                <input type="text" name="tempat_lahir" class="form-control" 
+                                placeholder="Masukkan Tempat Lahir">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Tanggal Lahir</label>
                             <div class="col-md-6">
-                                <input type="date" name="tgl_lahir" class="form-control" placeholder="Masukkan Tanggal Lahir">
+                                <input type="date" name="tgl_lahir" class="form-control" 
+                                placeholder="Masukkan Tanggal Lahir">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Telepon</label>
                             <div class="col-md-6">
-                                <input type="text" name="telepon" class="form-control" placeholder="Masukkan Nomor Telepon">
+                                <input type="text" name="telepon" class="form-control" 
+                                placeholder="Masukkan Nomor Telepon">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Alamat</label>
                             <div class="col-md-6">
-                                <input type="text" name="alamat" class="form-control" placeholder="Masukkan Alamat">
+                                <input type="text" name="alamat" class="form-control" 
+                                placeholder="Masukkan Alamat">
                             </div>
                         </div>
 
@@ -57,7 +62,8 @@
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Photo</label>
                             <div class="col-md-6">
-                                <input type="file" name="foto" class="form-control" placeholder="Masukkan Photo">
+                                <input type="file" name="foto" class="form-control" 
+                                placeholder="Masukkan Photo">
                             </div>
                         </div>
 

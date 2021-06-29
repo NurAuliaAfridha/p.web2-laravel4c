@@ -11,11 +11,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('mahasiswa', 'MahasiswaController');
 
 //routing mahasiswa
-Route::get('mahasiswa', 'MahasiswaController@index');
+Route::get('mahasiswa', 'MahasiswaController@index')->name('mahasiswa');
 
-Route::get('mahasiswa-create', 'MahasiswaController@create');
+Route::get('mahasiswa-create', 'MahasiswaController@create')->name('create.mahasiswa');
 
-Route::post('mahasiswa-store', 'MahasiswaController@store');
+Route::POST('mahasiswa-store', 'MahasiswaController@store')->name('simpan.mahasiswa');
+
+Route::get('mahasiswa-edit/{id}', 'MahasiswaController@edit')->name('edit.mahasiswa');
+
+Route::POST('mahasiswa-update/{id}', 'MahasiswaController@update')->name('update.mahasiswa');
+
+Route::get('mahasiswa-hapus/{id}', 'MahasiswaController@destroy')->name('hapus.mahasiswa');
 
 //routing makul
 Route::get('makul', 'MakulController@index')->name('makul');
