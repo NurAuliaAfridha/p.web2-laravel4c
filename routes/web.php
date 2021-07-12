@@ -13,7 +13,7 @@ Route::resource('mahasiswa', 'MahasiswaController');
 //routing mahasiswa
 Route::get('mahasiswa', 'MahasiswaController@index')->name('mahasiswa');
 
-Route::get('mahasiswa-create', 'MahasiswaController@create')->name('create.mahasiswa');
+Route::get('mahasiswa-create', 'MahasiswaController@create')->name('tambah.mahasiswa');
 
 Route::POST('mahasiswa-store', 'MahasiswaController@store')->name('simpan.mahasiswa');
 

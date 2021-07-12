@@ -12,7 +12,19 @@
                         <div class="form-group row">
                                 <label for="" class="col-md-4 text-md-right">Nama Lengkap</label>
                             <div class="col-md-6">
-                                <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama">
+                            <select name="user_id" id="user_id" class="form-control">
+                                    <option value="" disabled selected>Pilih User</option>
+                                    @foreach ($user as $u)
+                                    <option value="{{ $u->id }}" > {{ $u->name }} </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="" class="col-md-4 text-md-right">NPM</label>
+                            <div class="col-md-6">
+                                <input type="number" name="npm" class="form-control" placeholder="Masukkan NPM" maxlength="8">
                             </div>
                         </div>
 
@@ -31,6 +43,17 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="" class="col-md-4 text-md-right">Jenis Kelamin</label>
+                            <div class="col-md-6">
+                                <select name="gender" id="gender" class="form-control">
+                                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                    <option value="L">Laki-Laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Telepon</label>
                             <div class="col-md-6">
                                 <input type="text" name="telepon" class="form-control" placeholder="Masukkan Nomor Telepon">
@@ -40,24 +63,7 @@
                         <div class="form-group row">
                             <label for="" class="col-md-4 text-md-right">Alamat</label>
                             <div class="col-md-6">
-                                <input type="text" name="alamat" class="form-control" placeholder="Masukkan Alamat">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="" class="col-md-4 text-md-right">Jenis Kelamin</label>
-                            <div class="col-md-6">
-                                <select name="gender" class="form-control">
-                                    <option value="L">Laki-Laki</option>
-                                    <option value="P">Perempuan</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="" class="col-md-4 text-md-right">Photo</label>
-                            <div class="col-md-6">
-                                <input type="file" name="foto" class="form-control" placeholder="Masukkan Photo">
+                                <textarea name="alamat" id="alamat" cols="30" rows="3" class="form-control" style="resize: none" placeholder="Masukkan Alamat"></textarea>
                             </div>
                         </div>
 
