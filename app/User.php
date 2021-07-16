@@ -41,4 +41,5 @@ class User extends Authenticatable
     {
         return $this->hasOne(Mahasiswa::class, 'user_id', 'id');
     }
+    
 }

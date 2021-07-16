@@ -35,3 +35,16 @@ Route::get('makul-edit/{id}', 'MakulController@edit')->name('edit.makul');
 Route::POST('makul-update/{id}', 'MakulController@update')->name('update.makul');
 
 Route::get('makul-hapus/{id}', 'MakulController@destroy')->name('hapus.makul');
+
+//routing nilai
+Route::get('nilai', 'NilaiController@index')->name('nilai');
+
+Route::get('nilai-create', 'NilaiController@create')->name('tambah.nilai');
+
+Route::POST('nilai-store', 'NilaiController@store')->name('simpan.nilai');
+
+Route::get('nilai-edit/{id}', 'NilaiController@edit')->name('edit.nilai');
+
+Route::POST('nilai-update/{id}', 'NilaiController@update')->name('update.nilai');
+
+Route::get('nilai-hapus/{id}', 'NilaiController@destroy')->name('hapus.nilai');

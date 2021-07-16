@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Data Makul
-                    <a href="{{ route('tambah.makul')}}" class="btn btn-sm btn-primary float-right">Tambah Data</a>
+                        <a href="{{ route('tambah.makul')}}" class="btn btn-md btn-primary float-right">Tambah Data</a>             
                 
                 </div>
                 <div class="card-body">
