@@ -6,8 +6,9 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Data Makul
+                    <div class="class-pull">
                         <a href="{{ route('tambah.makul')}}" class="btn btn-md btn-primary float-right">Tambah Data</a>             
-                
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
