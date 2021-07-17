@@ -27,7 +27,7 @@
                                 
                             @foreach ($makul as $mk)
                                 <tr>
-                                    <td>{{ $mk->id }}</td>
+                                    <td>{{ $id++ }}</td>
                                     <td>{{ $mk->kd_makul }}</td>
                                     <td>{{ $mk->nama_makul }}</td>
                                     <td>{{ $mk->sks }}</td>
