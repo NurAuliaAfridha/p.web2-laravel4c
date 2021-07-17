@@ -20,6 +20,11 @@
                                 <th>SKS</th>
                                 <th>AKSI</th>                            
                             </tr>
+                            
+                                @php
+                                    $id = 1;
+                                @endphp
+                                
                             @foreach ($makul as $mk)
                                 <tr>
                                     <td>{{ $mk->id }}</td>
