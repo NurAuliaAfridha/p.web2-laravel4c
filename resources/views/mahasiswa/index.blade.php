@@ -23,9 +23,14 @@
                                 <th>ALAMAT</th>
                                 <th>AKSI</th>
                             </tr>
+
+                                @php 
+                                    $id = 1;
+                                @endphp
+
                             @foreach ($mahasiswa as $mhs)
                             <tr>
-                                <td>{{ $mhs->id }}</td>
+                                <td>{{ $id++ }}</td>
                                 <td>{{ $mhs->user->name }}</td>
                                 <td>{{ $mhs->npm }}</td>
                                 <td>{{ $mhs->tempat_lahir.', '. $mhs->tgl_lahir }}</td>
